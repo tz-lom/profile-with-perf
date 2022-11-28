@@ -2,7 +2,7 @@ perf ?= perf
 hotspot ?= hotspot
 
 
-all: e0 e1 e1.1 e2 e3 e4
+all: h0 h1 h1.1 h2 h3 h4
 	echo Examples: $<
 .PHONY: all
 
@@ -24,21 +24,13 @@ t3: main.cpp
 	
 e%: t%
 	$(perf) record --call-graph dwarf --aio -z -o $@ ./$<
-	$(hotspot) $@
 
 e1.1: t1
 	$(perf) record --aio -z -o $@ ./$<
-	$(hotspot) $@
 
-# perf-e1.data: e1
-# 	$(perf) record --call-graph dwarf --aio -z -o e1.perf.data ./e1
-#      
-# perf-e2.data: e2
-# 	$(perf) record --call-graph dwarf --aio -z -o e2.perf.data ./e2
-#      
-# perf-e3.data: e3
-# 	$(perf) record --call-graph dwarf --aio -z -o e3.perf.data ./e3
-#      
-# 
-# hotspot-%: e%.perf.data
-# 	$(hotspot) $<
+h%: e%
+	$(hotspot) $<
+	
+r%: e%
+	$(perf) report -i $<
+
