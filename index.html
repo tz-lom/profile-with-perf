@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="S09g6vvXyONnSleOSfDqKF0Zk3AVtFnFGY+0ACXlUBylqTa/4+iXZsOJW17YsdL0A1NTrYQu22Y6v8Y2rzRCBA==" />
+<meta name="csrf-token" content="onwZ1AoHvwNvEZ62eiy30lUE8Fer4mj43m0st8qHjW9Mmk+BEjjghsvSkmbrbY8OC04wijp46lv9XV6BQFafdw==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue"">
@@ -975,20 +975,118 @@ TopdownL1_SMT:
 --sample-cpu</span></p>
 
 <pre style="color:rgb(36, 41, 47); font-size:13.6px"> </pre>
-</div></div></section><section data-id="26aa0faa922ed47fc9ebc1bf3d4c89f8"><div class="sl-block" data-block-type="image" style="width: 845px; height: 369px; left: 24px; top: 94.572px;" data-name="image-d8ff8b" data-block-id="4309b5749ef269a869f0f053ac83f1fa"><div class="sl-block-content" style="z-index: 10;"><img class="" data-natural-width="845" data-natural-height="369" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039437/pasted-from-clipboard.png"></div></div>
+</div></div></section><section data-id="26aa0faa922ed47fc9ebc1bf3d4c89f8"><div class="sl-block" data-block-type="image" style="width: 845px; height: 369px; left: 24px; top: 94.572px; min-width: 1px; min-height: 1px;" data-name="image-d8ff8b" data-block-id="4309b5749ef269a869f0f053ac83f1fa"><div class="sl-block-content" style="z-index: 10;"><img class="" data-natural-width="845" data-natural-height="369" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039437/pasted-from-clipboard.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 24px; top: 19.5px;" data-name="text-b93e61" data-block-id="a01d786cd2a95fb4ed415f5a315a1b82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p style="text-align: left;">perf report -i &lt;file name&gt;</p>
 </div></div></section><section data-id="9f8943bfdb7f766f5f76994fb9d89247"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 18px; top: 23.5px;" data-name="text-b809b9" data-block-id="de3ab468fe65eb35a4214a1db869654e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
 <p style="text-align:left">hotspot &lt;file name&gt;</p>
 </div></div>
-<div class="sl-block" data-block-type="image" style="width: 45.53px; height: 87px; left: 896.457px; top: 19px;" data-name="image-3712d0" data-block-id="00d33ff576af0de296344879c0b1363d"><div class="sl-block-content" style="z-index: 11;"><img class="" data-natural-width="314" data-natural-height="600" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039441/pasted-from-clipboard.png"></div></div>
-<div class="sl-block" data-block-type="image" style="width: 847.358px; height: 603px; left: 28.043px; top: 79px;" data-name="image-c16088" data-block-id="5b12fd2035a0f06a38c8ff455daa3ede"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1127" data-natural-height="802" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039443/pasted-from-clipboard.png"></div></div></section></section><section data-id="796f63dfcbbf6fe02826497e95de0e53"></section>
+<div class="sl-block" data-block-type="image" style="width: 45.53px; height: 87px; left: 896.457px; top: 19px; min-width: 1px; min-height: 1px;" data-name="image-3712d0" data-block-id="00d33ff576af0de296344879c0b1363d"><div class="sl-block-content" style="z-index: 11;"><img class="" data-natural-width="314" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039441/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 847.358px; height: 603px; left: 28.043px; top: 77px; min-width: 1px; min-height: 1px;" data-name="image-c16088" data-block-id="5b12fd2035a0f06a38c8ff455daa3ede"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1127" data-natural-height="802" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10039443/pasted-from-clipboard.png"></div></div></section></section><section data-id="796f63dfcbbf6fe02826497e95de0e53"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-name="code-90cc1e" data-block-id="ad9698c12e1e1f90dc2122f8836ab1c1"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 10;"><pre class="cpp" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="">#include &lt;chrono&gt;
+#include &lt;thread&gt;
+void sleep(int ms)
+{
+#ifdef SLEEP
+	 std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+#else
+	volatile int v=ms*1e5;
+	for(;v&gt;0;--v){}
+#endif
+}
+
+void bar()
+{
+	sleep(C);
+}
+
+void foo()
+{
+	for(int j=0; j&lt;N; ++j)
+	{
+		sleep(B);
+		bar();
+	}
+}
+
+int main()
+{
+	for(int i=0; i&lt;M; ++i)
+	{
+		sleep(A);
+		foo();
+		bar();
+	}
+	return 0;
+}</code></pre></div></div></section><section class="stack" data-id="07bcd0b2dba2ca6d3c744685b3de2684"><section data-id="5dbb9bd99daa810a37ef92713138c8bb"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="7718b910d7845c4243db38d97f781ecc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left"><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">g++ -std=c++11 main.cpp -o t0 -O2 -DA=300 -DB=200 -DC=100 -DN=2 -DM=2</span></span><br>
+ </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 904.496px; height: 299px; left: 27.752px; top: 153.5px; min-width: 1px; min-height: 1px;" data-name="image-c6cd14" data-block-id="ac51e179b4648960f6dbbe837ab6d7a7"><div class="sl-block-content" style="z-index: 11;"><img class="" data-natural-width="1086" data-natural-height="359" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10042961/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 49px; height: 35px; left: 311px; top: 20.5px;" data-name="shape-2799af" data-block-id="0d3dc03b21d2642fd53ac1ed2328b95a"><div class="sl-block-content fragment" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="5px" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 49 35"><defs><clippath id="shape-mask-2-1669664238092"><rect width="49" height="35" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10"></rect></clippath></defs><rect width="49" height="35" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" clip-path="url(#shape-mask-2-1669664238092)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="fc239efd34b116a7e70c3d7aac2a9993"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>h0</h3>
+</div></div></section><section data-id="b21b2e2c7dd51c2171c16e20e8f1cbbb"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="8d359b637631e33817f59afbe9121b9d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left"><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">g++ -std=c++11 main.cpp -o t0 </span>-g </span><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">-O2 -DA=300 -DB=200 -DC=100 -DN=2 -DM=2</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 72px; height: 43px; left: 311px; top: 20.5px;" data-name="shape-2799af" data-block-id="a2fdd1ca9aa31b229e056b6cb6a617d8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#ff0000" data-shape-stroke-width="5px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 72 43"><defs><clippath id="shape-mask-1-1669664689865"><rect width="72" height="43" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10"></rect></clippath></defs><rect width="72" height="43" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#ff0000" stroke-width="10" clip-path="url(#shape-mask-1-1669664689865)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 925.333px; height: 694px; left: 21.8335px; top: 51px;" data-name="image-05cd42" data-block-id="9154b21b85f77ce8f199245a37c86aba"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10042977/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="0a210f217759c4956f5621be6c4202f0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>h1</h3>
+</div></div></section><section data-id="2dcab331152725c75a1b0030fcfa13df"><div class="sl-block" data-block-type="image" style="width: 942.667px; height: 707px; left: 0px; top: 25px;" data-name="image-4ad7bf" data-block-id="5d82bf567891adb18cc8db3b193be9c7"><div class="sl-block-content" style="z-index: 10;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10042984/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="6e565d57a919269952bb414b3ea4892c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>h1</h3>
+</div></div></section><section data-id="af9a6fa8d59c8f85e9da2a56dda52954"><div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="c3e2e318f4e958730be86306e3918e16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>h2</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 922.5px; height: 691.875px; left: 18.75px; top: 51px;" data-name="image-9d157f" data-block-id="437ada94cf542d221da847ac056ad914"><div class="sl-block-content" style="z-index: 11;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043221/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 0px; top: 0px;" data-name="text-100798" data-block-id="303b5fb4c1b73c1da5009e09973bfc6a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-has-custom-html="">
+<p style="text-align:left">perf record <span style="color:#FF0000"><s>--call-graph dwarf</s></span> -o e2 t1</p>
+</div></div></section></section><section class="stack" data-id="64f82822275927e7bc887ccabff761f8"><section data-id="d398d7ed84b2e0a1ba7eb959e7742bb9"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="75eeb10efb8ad09d4173ef17906f8d69"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left"><span style="font-size:0.7em">g++ -std=c++11 main.cpp -o $@ -g -O2 -DA=300 -DB=200 -DC=100 -DN=2 -DM=2</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="0924ecc929c9d37104192c30b523fe85"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>h3</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 939.834px; height: 704.875px; left: 14.583px; top: 36px;" data-name="image-d2ca37" data-block-id="36cea0c78945a1ddae9604604f55632e"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043257/pasted-from-clipboard.png"></div></div></section><section data-id="6f1fe76b37835a6610f4304f47115a4e"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="d496655e0dfec5e6e5dc80836372248b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-has-custom-html="">
+<p style="text-align:left"><span style="font-size:0.7em">g++ -std=c++11 main.cpp -o $@ -g -O2 -DA=300 -DB=200 -DC=1000 -DN=2 -DM=2 -DSLEEP</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="958a32f579611c18ad7eccaefb43826c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>h4</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 924px; height: 693px; left: 18px; top: 51px;" data-name="image-ec5855" data-block-id="2f3ceae643720f1d00c6f7cc26bc3d77"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043268/pasted-from-clipboard.png"></div></div></section><section data-id="f61abf0afd5b15acdf4a7bbfd1793a5c"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="9a4496a27c68ae4c776fa241e2e0e215"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-has-custom-html="">
+<p style="text-align:left"><span style="font-size:0.7em">perf record --call-graph dwarf --aio -z <strong><span style="color:#008000;">-F 25000</span></strong> -o e5 ./t4&lt;</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="08c3579bdd9ea31fc262467b67fc3a32"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>h5</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 910.667px; height: 683px; left: 29.1665px; top: 55.5px;" data-name="image-eb3d9a" data-block-id="df73b483f5ae622afa0dd5bf7b3e4fae"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043280/pasted-from-clipboard.png"></div></div></section><section data-id="c3f17c0d6fb00289597165da2ca3ffb4"><div class="sl-block" data-block-type="text" style="height: auto; width: 933px; left: 18px; top: 16.5px;" data-name="text-db50e9" data-block-id="86591e06468f6fe0e5955a3ad03332d1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-has-custom-html="">
+<p style="text-align:left"><span style="font-size:0.7em">perf record --call-graph dwarf --aio -z <strong><span style="color:#008000;">-F 25000</span></strong> -o e5 ./t4&lt;</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 75px; left: 885px; top: 0px;" data-name="text-3dd5bb" data-block-id="1d52529bcd5e0434f7a6a116aea55f4e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>h5</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 874.667px; height: 656px; left: 47.833px; top: 70px;" data-name="image-43369e" data-block-id="b42e5e23f9f34329c4b3217b00640a00"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="1240" data-natural-height="930" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043282/pasted-from-clipboard.png"></div></div></section></section><section data-id="3c09bea91604c1fa0c285fb751152731"><div class="sl-block" data-block-type="text" style="height: auto; width: 746px; left: 100px; top: 152px;" data-name="text-87ecf8" data-block-id="5bab5eadcb93b2cc093b5a5334169690"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align: left;">https://github.com/tz-lom/profile-with-perf.git</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 0px; top: 0px;" data-name="text-607caa" data-block-id="2a1f5d59838c1bd43702c72d137f58b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>Last minute</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 710px; height: 79px; left: 45px; top: 222px;" data-name="code-cd3c64" data-block-id="4326f5eac20032c552319ee555a8a6ef"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="bash" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="">$ git clone https://github.com/tz-lom/profile-with-perf.git
+$ cd profile-with-perf
+$ make h3</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="width: 45px; height: 45px; left: 45px; top: 149px; min-width: 1px; min-height: 1px;" data-name="image-263f3e" data-block-id="80a89afe53878cca68078a24e4cad522"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043294/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 403.201px; height: 246.526px; left: 278.399px; top: 385px;" data-name="image-c8deed" data-block-id="2c8b25821a20958fadeef1a897436ce5"><div class="sl-block-content" style="z-index: 14; border-style: solid; border-width: 2px; border-color: rgb(109, 158, 235); border-radius: 4px;"><img class="" data-natural-width="893" data-natural-height="546" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/12474/images/10043301/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 92px; height: 68px; left: 609px; top: 377px;" data-name="shape-fcc8e8" data-block-id="0b6b7f8049ccfc294881d29627ba02ad"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#6aa84f" data-shape-stroke-width="5px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 92 68"><defs><clippath id="shape-mask-3-1669675486529"><rect width="92" height="68" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#6aa84f" stroke-width="10"></rect></clippath></defs><rect width="92" height="68" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#6aa84f" stroke-width="10" clip-path="url(#shape-mask-3-1669675486529)"></rect></svg></div></div></section>
 			</div>
 		</div>
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null,"editor_grid":false,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":null,"profile_sorting":null,"profile_layout":null},"email":"vzorvat@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":485940,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2509149,"slug":"perf","title":"perf","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-11-27T20:17:21.443Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/fbbf77e1f2cb596cdeee750068e6191d/thumb.jpg?1669593447","view_count":0,"user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":12,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1669594709545,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":false,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":null,"profile_sorting":null,"profile_layout":null},"email":"vzorvat@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":1104479,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2509149,"slug":"perf","title":"perf","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-11-27T20:17:21.443Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/fbbf77e1f2cb596cdeee750068e6191d/thumb.jpg?1669593447","view_count":0,"user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":23,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":null,"data_updated_at":1669675537083,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":12474,"username":"tzlom","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/51aaa1883f723e4255b37d7b1c86e5ac?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"default","team_id":null,"settings":{"id":56699561,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>

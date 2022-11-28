@@ -1,0 +1,14 @@
+@startgantt
+
+[bar] starts 10 days after start
+[bar] lasts 3 days
+
+[foo'] lasts 5 days
+[foo'] starts 9 days after start
+
+[foo] lasts 4 days
+[foo] starts 3 days after start
+
+[main] lasts 15 days
+
+@endgantt
