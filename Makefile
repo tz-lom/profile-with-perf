@@ -30,6 +30,9 @@ e2: t1
 e5: t4
 	$(perf) record --call-graph dwarf --aio -z -F 25000 -o $@ ./$<
 
+e6: t4
+	$(perf) record --call-graph dwarf --aio -z -e cycles -e sched:sched_switch --switch-events -o $@ ./$<
+
 h%: e%
 	$(hotspot) $<
 
